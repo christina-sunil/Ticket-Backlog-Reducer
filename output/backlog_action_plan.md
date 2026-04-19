@@ -12,8 +12,8 @@ _Analysis timestamp: 2026-04-19T17:08:11.036000Z_
 
 Backlog action mix:
 - Close as stale: **24**
-- Escalate / reassign: **12**
-- Follow up with requester: **22**
+- Escalate / reassign: **13**
+- Follow up with requester: **21**
 - Request missing information: **1**
 - Apply KB and resolve: **83**
 
@@ -164,7 +164,7 @@ Backlog action mix:
 | RITM0354841 | 40 | OLD | 2 - High | Work in Progress | Escalate / reassign |
 | RITM0357591 | 26 | STALE | 3 - Moderate | Work in Progress | Follow up with requester |
 | RITM0357914 | 24 | STALE | 3 - Moderate | Work in Progress | Follow up with requester |
-| RITM0358601 | 20 | STALE | 1 - Critical | Work in Progress | Follow up with requester |
+| RITM0358601 | 20 | STALE | 1 - Critical | Work in Progress | Escalate / reassign |
 | SCTASK0083827 | 20 | STALE | 4 - Low | Open | Follow up with requester |
 | INC0098760 | 16 | STALE | 3 - Moderate | In Progress | Follow up with requester |
 | RITM0359983 | 12 | AGING | 4 - Low | Work in Progress | Apply KB and resolve |
@@ -262,6 +262,6 @@ Tickets marked with **Close as stale** (recommended for bulk closure after final
 | RITM0354841 | Sreeja Janumpally | 40 | OLD | Escalate / reassign |
 | RITM0357591 | Sreeja Janumpally | 26 | STALE | Follow up with requester |
 | RITM0357914 | Sreeja Janumpally | 24 | STALE | Follow up with requester |
-| RITM0358601 | Sreeja Janumpally | 20 | STALE | Follow up with requester |
+| RITM0358601 | Sreeja Janumpally | 20 | STALE | Escalate / reassign |
 | SCTASK0083827 | Sreeja Janumpally | 20 | STALE | Follow up with requester |
 | INC0098760 | Sreeja Janumpally | 16 | STALE | Follow up with requester |
