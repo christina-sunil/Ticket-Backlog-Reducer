@@ -43,7 +43,7 @@ Backlog action mix:
 | RITM0362174 | 1 | NEW | 2 - High | Work in Progress | Apply KB and resolve |
 | RITM0362218 | 1 | NEW | 2 - High | Work in Progress | Apply KB and resolve |
 
-### Chris Braga (1 tickets)
+### Chris Braga (1 ticket)
 
 | Ticket | Age (days) | Age bucket | Priority | State | Next action |
 |---|---:|---|---|---|---|
