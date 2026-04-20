@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Backlog Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    .kpi-container {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .kpi {
+      padding: 20px;
+      border-radius: 8px;
+      background: #f5f5f5;
+      min-width: 140px;
+    }
+
+    .kpi h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .kpi p {
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .chart-container {
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ticket Backlog Dashboard</h1>
+
+  <!-- KPI SECTION -->
+  <div class="kpi-container">
+    <div class="kpi">
+      <h3>Total Open</h3>
+      <p id="kpi-open">–</p>
+    </div>
+    <div class="kpi">
+      <h3>L1 Closable (≤24h)</h3>
+      <p id="kpi-l1">–</p>
+    </div>
+    <div class="kpi">
+      <h3>L2 Required</h3>
+      <p id="kpi-l2">–</p>
+    </div>
+    <div class="kpi">
+      <h3>At Risk / Aged</h3>
+      <p id="kpi-risk">–</p>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-container">
+    <canvas id="statusChart"></canvas>
+  </div>
+
+  <script>
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+
+        // Populate KPIs
+        document.getElementById("kpi-open").innerText = data.summary.open;
+        document.getElementById("kpi-l1").innerText = data.kpis.l1_closable;
+        document.getElementById("kpi-l2").innerText = data.kpis.l2_required;
+        document.getElementById("kpi-risk").innerText = data.kpis.at_risk;
+
+        // Render chart
+        new Chart(document.getElementById("statusChart"), {
+          type: "bar",
+          data: {
+            labels: ["Open", "In Progress", "Blocked", "Closed"],
+            datasets: [{
+              data: [
+                data.summary.open,
+                data.summary.in_progress,
+                data.summary.blocked,
+                data.summary.closed
+              ],
+              backgroundColor: ["#f44336", "#ff9800", "#9c27b0", "#4caf50"]
+            }]
+          },
+          options: {
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
