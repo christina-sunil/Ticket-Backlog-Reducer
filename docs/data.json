@@ -4,5 +4,10 @@
     "in_progress": 18,
     "blocked": 7,
     "closed": 65
+  },
+  "kpis": {
+    "l1_closable": 15,
+    "l2_required": 21,
+    "at_risk": 6
   }
 }
