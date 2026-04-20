@@ -1,35 +1,8 @@
-<script>
-  fetch("data.json")
-    .then(response => response.json())
-    .then(data => {
-      const ctx = document.getElementById('statusChart');
-
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Open', 'In Progress', 'Blocked', 'Closed'],
-          datasets: [{
-            label: 'Ticket Count',
-            data: [
-              data.summary.open,
-              data.summary.in_progress,
-              data.summary.blocked,
-              data.summary.closed
-            ],
-            backgroundColor: [
-              '#f44336',
-              '#ff9800',
-              '#9c27b0',
-              '#4caf50'
-            ]
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: false }
-          }
-        }
-      });
-    });
-</script>
+{
+  "summary": {
+    "open": 42,
+    "in_progress": 18,
+    "blocked": 7,
+    "closed": 65
+  }
+}
