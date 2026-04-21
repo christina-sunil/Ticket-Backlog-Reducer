@@ -58,3 +58,17 @@ A realistic **30–40% backlog reduction** without additional staffing or high e
 - Enforce **weekly stale‑ticket hygiene**
 - Drive KB reuse to reduce repeat ticket patterns
 ``
+---
+
+## First response time summary (from ServiceNow data)
+
+- **Average first response time:** ___ days  
+- **Maximum first response delay:** ___ days  
+- **Tickets delayed beyond expected first response:** ___
+
+### Observations
+- Delayed first response is contributing to tickets moving into AGING and STALE buckets.
+- Faster initial response on NEW tickets will reduce overall backlog aging.
+
+✅ **Action:**  
+Prioritize first response for NEW and AGING tickets before working on escalations.
